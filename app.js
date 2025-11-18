@@ -60,9 +60,9 @@ const sessionOptions={
     }
 };
 
-// app.get("/", (req, res) => {
-//     res.send("welcome to home page")
-// })
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+})
 
 
 app.use(session(sessionOptions));
