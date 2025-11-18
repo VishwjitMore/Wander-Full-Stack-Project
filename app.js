@@ -20,6 +20,7 @@ const listings=require("./routes/listing.js");
 const reviews=require("./routes/review.js");
 const user=require("./routes/user.js");
 
+const port = process.env.PORT || 8080;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -97,6 +98,6 @@ app.use((err,req,res,next)=>{
     // res.status(status).send(message);
 })
 
-app.listen(8080, () => {
-    console.log("app is listening at port 8080");
+app.listen(port, () => {
+    console.log(`app is listening at port ${port}`);
 });
